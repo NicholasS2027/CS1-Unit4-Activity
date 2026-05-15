@@ -28,6 +28,7 @@ function toggleMode() {
     // 2. Conditionally apply styles based on the mode
     if (darkMode == true) {
         console.log("apply dark mode");
+        heading.textContent = "Dark Mode";
         body.style.background = "black";
         heading.style.color = "lightgrey";
         description.style.color = "white";
@@ -36,9 +37,11 @@ function toggleMode() {
         description.textContent = "Welcome to the Dark Side";
         toggleBtn.textContent = "Switch to Light";
         image.src = "Darth_vader_by_br3ndan5_dcvp5rb.webp";
+        emoji.classList.remove("emoji-anim");
     }
     else {
         console.log("apply light mode");
+        heading.textContent = "Light Mode";
         body.style.background = "white";
         heading.style.color = "black";
         description.style.color = "black";
@@ -47,6 +50,7 @@ function toggleMode() {
         description.textContent = "Welcome to the Light Side";
         toggleBtn.textContent = "Switch to Dark";
         image.src = "Anakin_Skywalker_RotS.webp";
+        emoji.classList.remove("emoji-anim");
     }
 }
 
@@ -64,22 +68,27 @@ hackerBtn.addEventListener("click", setHackerMode);
 function setHackerMode() {
     body.style.background = "black";
     heading.style.fontFamily = "monospace";
-    heading.textContent  = "Error code 264";
+    heading.textContent = "Error code 264";
+    heading.style.background = "black";
     description.style.color = "rgb(0, 255, 94)";
     description.textContent = "YOU HAVE BEEN HACKED ):";
     image.src = "warningsign.webp";
 }
 
 const sunsetBtn = document.querySelector("#sunset");
+const emoji = document.querySelector("#emoji");
 sunsetBtn.addEventListener("click", setSunsetMode);
 function setSunsetMode() {
     body.style.background = "linear-gradient(gold, lavender)";
     heading.textContent = "Welcome to the view";
+    heading.style.background = "gold";
     heading.style.color = "rgb(38, 62, 183)";
     heading.style.fontFamily = "sunset heaven";
     description.style.color = "rgb(38, 62, 183)";
     description.textContent = "You have now been blessed with an amazing view!";
     image.src = "sunset.webp";    
+    // ATTACHING ANIMS:
+    emoji.classList.add("emoji-anim");
 }
 
 

@@ -1,1 +1,23 @@
-
+#emoji {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    font-size: 30px;
+}
+.emoji-anim {
+    opacity: 1 !important;
+    animation-name: zigzag;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes zigzag {
+    0% { transform: translate(0px,0px); }
+    25% { transform: translate(200px,200px); }
+    50% { transform: translate(100px,0px); }
+    75% { transform: translate(250px,250px); }
+    85% { transform: translate(150px,150px); }
+    95% { transform: translate(50px,50px); }
+    100% { transform: translate(0px,0px); }    
+}
