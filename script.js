@@ -40,7 +40,7 @@ function toggleMode() {
         emoji.classList.remove("emoji-anim");
     }
     else {
-        console.log("apply light mode");
+        console.log("apply light mode"); 
         heading.textContent = "Light Mode";
         body.style.background = "white";
         heading.style.color = "black";
@@ -70,6 +70,7 @@ function setHackerMode() {
     heading.style.fontFamily = "monospace";
     heading.textContent = "Error code 264";
     heading.style.background = "black";
+    heading.style.color = "blue";
     description.style.color = "rgb(0, 255, 94)";
     description.textContent = "YOU HAVE BEEN HACKED ):";
     image.src = "warningsign.webp";
